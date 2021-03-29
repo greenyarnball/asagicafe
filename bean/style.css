@@ -38,9 +38,9 @@ a {
 }
 .flex{
     display: flex;
-    flex-grow: 1;
 }
 h3{ 
+    flex-grow: 1;
     display: flexbox;
     padding: 20px;
     font-family:serif;
@@ -53,9 +53,7 @@ h3{
 /*画像の角を丸くする*/
 .beancup{
     border-radius: 90px;
-    text-align: center;
 }
 p{
-    margin: auto;
-    clear:both;
+    margin: 10px;
 }
