@@ -30,7 +30,7 @@ a {
     font-size: large;
 }
 /*ページタイトルの設定*/
-h1{
+h2{
     margin: 20px;
     padding: 10px;
     font-family:serif;
@@ -38,21 +38,24 @@ h1{
     text-shadow: 0px 1px 1px black;
 }
 /*説明内のレイアウト*/
-h2{
+h3{
+    
+    padding: 20px;
     font-family:serif;
-    margin: 10;
-    padding: 100;
-    /*border-radius: 10px;
-    background-color: rgba(153, 77, 0, 0.5);*/
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:wheat;
+    border: solid 3px black;
 
 }
 /*画像の角を丸くする*/
 .beancup{
-    padding: 20px;
-    border-radius: 80px;
+    border-radius: 90px;
     float: left;
 }
 table{
+    margin-left: 20px;
     text-align: left;
     border-collapse:collapse ;
 }
@@ -61,6 +64,7 @@ th{
 }
 /*画像の横に評価*/
 .evaluation{
+    margin-top: 30px;
     width: auto;
     float: left;
 }
