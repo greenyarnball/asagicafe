@@ -47,6 +47,11 @@ a {
     color: #00A4AC;
     font-size: large;
 }
+.wrap{
+    width:800px;
+    margin:auto;
+    background-color:black;
+}
 .flex{
     display: flex;
 }
