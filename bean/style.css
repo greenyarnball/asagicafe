@@ -5,12 +5,32 @@ body{
     padding: 0px;
 }
 header{
-    position: relative;
     width: 100%;
     z-index: 10;
     background: whitesmoke;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,25);
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+ul{
+    overflow: hidden;
+    list-style: none;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px 30px 20px 10px;
+}
+/*リンクの色*/
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
 }
 h1{
     margin: 20px;
@@ -22,43 +42,31 @@ h1{
     border-bottom: solid 3px #00A4AC;
     text-shadow: 0px 1px 1px black;
 }
-h3{ 
-    flex-grow: 1;
-    display: flexbox;
-    padding: 20px;
-    font-family:serif;
-    margin: 30px;
-    border-radius: 10px;
-    background-color:wheat;
-    border: solid 3px black;
-}
-ul{
-    overflow: hidden;
-    list-style: none;
-    margin: 0 auto;
-    z-index: 2;
-}
-ul li{
-    display: inline-block;
-    padding: 20px 10px 20px 10px;
-}
-/*リンクの色*/
-a {
-    color: #00A4AC;
-    font-size: large;
-}
-.wrap{
-    width:800px;
-    margin:auto;
-    background-color:black;
-}
-.flex{
+#colum ul{
+    width: clac(100 + 10)px;
     display: flex;
+    flex-wrap: wrap;
+}
+#colum li{
+    list-style: none;
+    width: calc(50% - 20px);
+    padding: 0 10px 10px;
 }
 /*画像の角を丸くする*/
 .beancup{
+    text-align: center;
     border-radius: 90px;
 }
-p{
-    margin: 10px;
+#colum li a{
+    text-decoration: none;
+    color: #111;
+}
+/*商品ごとの装飾*/
+h2{ 
+    padding: 20px;
+    font-family:serif;
+    margin: 30px;
+    border-radius: 5px;
+    background-color:wheat;
+    border: solid 1px gray;
 }
