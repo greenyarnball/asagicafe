@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 body{
     margin: 0px;
     padding: 0px;
@@ -15,13 +14,13 @@ header{
     margin-top: 10px;
     margin-left: 30px;
 }
+/*ヘッダー内の配置*/
 ul{
     overflow: hidden;
     list-style: none;
     margin: 0 auto;
     z-index: 2;
 }
-
 ul li{
     display: inline-block;
     padding: 10px 30px 20px 10px;
@@ -32,6 +31,7 @@ a {
     color: black;
     font-size: large;
 }
+/*タイトルの装飾*/
 h1{
     margin: 20px;
     padding: 10px;
@@ -42,6 +42,7 @@ h1{
     border-bottom: solid 3px #00A4AC;
     text-shadow: 0px 1px 1px black;
 }
+/*商品を二列で並べる*/
 #colum ul{
     width: clac(100 + 10)px;
     display: flex;
@@ -53,16 +54,19 @@ h1{
     padding: 0 10px 10px;
 }
 /*画像の角を丸くする*/
-.beancup{
-    text-align: center;
+#colum img{
     border-radius: 90px;
 }
-#colum li a{
-    text-decoration: none;
-    color: #111;
+#colum li p{
+    font-size: 30px;
+}
+#colum li span{
+    margin-right: 10px;
+    font-size: 20px;
 }
 /*商品ごとの装飾*/
 h2{ 
+    text-align: center;
     padding: 20px;
     font-family:serif;
     margin: 30px;
