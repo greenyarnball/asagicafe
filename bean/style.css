@@ -42,6 +42,17 @@ h1{
     border-bottom: solid 3px #00A4AC;
     text-shadow: 0px 1px 1px black;
 }
+/*商品ごとの装飾*/
+h2{ 
+    text-align: center;
+    padding: 20px;
+    font-family:serif;
+    margin: 30px;
+    border-radius: 5px;
+    background-color:wheat;
+    border: solid 1px gray;
+}
+
 /*商品を二列で並べる*/
 #colum ul{
     width: clac(100 + 10)px;
@@ -63,14 +74,4 @@ h1{
 #colum li span{
     margin-right: 10px;
     font-size: 20px;
-}
-/*商品ごとの装飾*/
-h2{ 
-    text-align: center;
-    padding: 20px;
-    font-family:serif;
-    margin: 30px;
-    border-radius: 5px;
-    background-color:wheat;
-    border: solid 1px gray;
 }
