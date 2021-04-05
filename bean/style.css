@@ -44,7 +44,6 @@ h1{
 }
 /*商品ごとの装飾*/
 h2{ 
-    text-align: center;
     margin: 30px;
     padding: 30px 20px 60px 20px;
     font-family:serif;
@@ -64,14 +63,19 @@ h2{
     width: calc(50% - 20px);
     padding: 0 10px 10px;
 }
+#colum div{
+    text-align: center;
+}
 /*画像の角を丸くする*/
 #colum img{
     border-radius: 90px;
 }
 #colum li p{
+    text-align: center;
     font-size: 30px;
 }
 #colum li span{
+    text-align: right;
     margin-right: 10px;
     font-size: 20px;
 }
