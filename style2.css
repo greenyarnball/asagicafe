@@ -13,12 +13,13 @@ header{
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,25);
 }
-
+    div{
+        text-align: center;
+    }
 .logo{
-    width: 300px;
-     height:65px;
-    margin-top: 10px;
-    margin-left: 30px;
+    width: 600px;
+    height: 130px;
+    float: center;
 }
 ul{
     overflow: hidden;
@@ -26,11 +27,11 @@ ul{
     margin: 0 auto;
     z-index: 2;
 }
+
 ul li{
     display: inline-block;
     padding: 10px 30px 20px 10px;
 }
-
 .full{
 height: 100vh;
 background-repeat: no-repeat;
@@ -39,22 +40,23 @@ background-position: center center;
 background-image: url(img/info.jpg);
 }
 h2{
-    margin: 20px;
+    text-align: center;
+    margin: 100px;
     padding: 10px;
     font-family:serif;
     text-shadow: 0px 1px 1px black;
 }
 a{
+    font-size: 30px;
     text-decoration: none;
     color: #00A5BF;
 }
 .menu{
-    font-size: 2em;
-    text-shadow: 0.1em 0.1em 0.1em  black;
+    font-size: 4em;
+    text-shadow: 0.1em 0.1em 0.1em  gray;
 }
 p{
     font-family:serif;
-    margin: 10;
     padding: 100;
 }
 bean{
