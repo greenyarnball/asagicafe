@@ -13,12 +13,10 @@ header{
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,25);
 }
-    div{
-        text-align: center;
-    }
 .logo{
-    width: 600px;
-    height: 130px;
+    text-align: center;
+    width: 100%;
+    height: auto;
     float: center;
 }
 ul{
@@ -32,12 +30,10 @@ ul li{
     display: inline-block;
     padding: 10px 30px 20px 10px;
 }
-.full{
-height: 100vh;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center center;
-background-image: url(img/info.jpg);
+li a{
+    font-size: 30px;
+    text-decoration: none;
+    color: #00A5BF;
 }
 h2{
     text-align: center;
@@ -46,13 +42,23 @@ h2{
     font-family:serif;
     text-shadow: 0px 1px 1px black;
 }
-a{
-    font-size: 30px;
-    text-decoration: none;
+.menu1{
+    background-image: url(img/info.jpg);
     color: #00A5BF;
+    text-decoration: none;
+    font-size: 3em;
+    text-shadow: 0.1em 0.1em 0.1em  gray;
+}.menu2{
+    background-image: url(img/top.jpg);
+    color: #00A5BF;
+    text-decoration: none;
+    font-size: 3em;
+    text-shadow: 0.1em 0.1em 0.1em  gray;
 }
-.menu{
-    font-size: 4em;
+.menu3{
+    color: #00A5BF;
+    text-decoration: none;
+    font-size: 3em;
     text-shadow: 0.1em 0.1em 0.1em  gray;
 }
 p{
