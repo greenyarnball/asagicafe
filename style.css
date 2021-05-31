@@ -41,9 +41,10 @@ h2{
 }
 a{
     text-decoration: none;
+    font-size: 30px;
 }
 .text{
-    color: azure;
+    color: black;
 }
 .menu1{
     font-size: 2em;
