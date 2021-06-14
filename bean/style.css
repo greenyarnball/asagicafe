@@ -86,7 +86,7 @@ h2{
 }
 /*画像の角を丸くする*/
 #colum img{
-    border-radius: 90px;
+    border-radius: 90em;
 }
 #colum li p{
     text-align: center;
