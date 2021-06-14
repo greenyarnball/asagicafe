@@ -52,3 +52,6 @@ bean{
     border: 1px solid bisque;
     background: beige;
 }
+.text{
+    padding-left: 2em;
+}
