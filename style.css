@@ -34,13 +34,18 @@ a{
     text-decoration: none;
     font-size: 30px;
 }
+img{
+    border-radius: 90px;
+    margin :20px;
+}
 .text{
     color: black;
 }
 .menu{
     font-size: 2em;
-    text-shadow: 0.1em 0.1em 0.1em  black;
-    color: #00A5BF;
+    text-shadow: 0em 0em 0.1em  black;
+    color: black;
+    border-bottom: 2px solid #00A5BF;
 }
 p{
     font-family:serif;
