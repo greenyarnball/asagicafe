@@ -50,6 +50,7 @@ p{
     padding: 100;
 }
 .main-images{
+    float:left;
     border-radius: 90px;
 }
 bean{
@@ -59,4 +60,10 @@ bean{
 }
 .text{
     padding-left: 2em;
+}
+.short-text{
+    float: right;
+}
+div{
+    clear: both;
 }
