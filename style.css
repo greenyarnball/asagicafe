@@ -53,6 +53,7 @@ p{
 .main-images{
     float:right;
     border-radius: 90px;
+    padding: 0 50px 30px 0;
 }
 bean{
     padding: 20px;
