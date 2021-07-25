@@ -21,10 +21,17 @@ h2{
     text-align: left;
     font-size: 50px;
 }
+a{
+    text-decoration:none;
+    color: black;
+}
 p.text{
     font-family:serif;
     font-size: x-large;
     margin-left: 50px;
+}
+.main-images{
+    border-radius: 90px;
 }
 iframe{
     margin-left: 40px;
