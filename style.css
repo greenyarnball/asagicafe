@@ -42,7 +42,14 @@ a{
 .text{
     color: black;
 }
+/*Web フォントを定義*/
+@font-face {
+    font-family: 'myfont'; /* フォント名 */
+    /* フォーマットごとにパスを指定 */
+    src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
+  }
 .menu{
+    font-family: myfont;
     margin :20px;
     font-size: 2em;
     text-shadow: 0em 0em 0.1em  black;
