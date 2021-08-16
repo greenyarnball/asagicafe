@@ -60,7 +60,7 @@ h2{
 #colum ul{
     width: clac(100 + 10)px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    //複数行に折り返す
 }
 /*box全体をrelative*/
 .box{
