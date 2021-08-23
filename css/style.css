@@ -66,6 +66,7 @@ p{
     margin: 10;
     padding: 100;
 }
+/* 画像右寄せ */
 .main-images{
     float:right;
     border-radius: 25% 10%;
