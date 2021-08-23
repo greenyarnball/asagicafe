@@ -52,7 +52,7 @@ a{
     font-family: myfont;
     margin :20px;
     font-size: 2em;
-    text-shadow: 0em 0em 0.1em  black;
+    /* text-shadow: 0em 0em 0.1em  black; */
     color: black;
     border-bottom: 2px solid #00A5BF;
 }
@@ -68,8 +68,12 @@ p{
 }
 .main-images{
     float:right;
-    border-radius: 90px;
+    border-radius: 25% 10%;
     padding: 0 50px 30px 0;
+}
+.images{
+    border-radius: 25% 10%;
+    padding: 50px 0 0 50px;
 }
 bean{
     padding: 20px;
