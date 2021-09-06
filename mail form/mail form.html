@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>メールフォーム</title>
+        <link href="../css/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="../img/icon2.png"alt="手焙煎珈琲あさぎ" width="50%">
+        </h1>
+    </header>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="email" placeholder="Your Email">
+        <textarea name="message"></textarea>
+        <input type="text" name="honeypot" style="display:none">
+        <input type="hidden" name="accessKey" value="84cc0ceb-2b5d-4618-83d7-4175f6cfb4f2">
+        <input type="hidden" name="subject" value="Contact us from - example.com">
+        <input type="hidden" name="replyTo" value="@">
+        <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+        <input type="submit" value="Submit">
+      </form>
+    </body>
+</html>
