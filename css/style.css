@@ -71,7 +71,7 @@ a{
 .text2{
     color: black;
     font-family: myfont;
-    font-size: 2em;         /*textとフォントサイズが異なる*/
+    font-size: 20px;         /*textとフォントサイズが異なる*/
     padding: 0 10em;
     padding-left: 2em;
 }
