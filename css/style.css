@@ -68,6 +68,13 @@ a{
     padding: 0 10em;
     padding-left: 2em;
 }
+.text2{
+    color: black;
+    font-family: myfont;
+    font-size: 2em;         /*textとフォントサイズが異なる*/
+    padding: 0 10em;
+    padding-left: 2em;
+}
 p{
     font-family:serif;
     margin: 10;
