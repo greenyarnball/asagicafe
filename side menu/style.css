@@ -1,11 +1,43 @@
 @charset "utf-8";
+* {
+    margin:0; padding:0;
+  }
+body{
+    background-color: beige;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(12px);
+    background-size: cover;
+}
 header{
-    position: relative;
     width: 100%;
     z-index: 10;
     background: whitesmoke;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,25);
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 30px;
+}  
+/*ヘッダーのデザイン調整*/
+.adjust{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+li{
+    margin: 1em;
+}
+ul{
+    overflow: hidden;
+    list-style: none;
+    margin: 0 auto;
+    z-index: 2;
+}
+ul li{
+    display: inline-block;
+    padding: 0 0.5em 0 0;
 }
 h1{
     margin: 20px;
