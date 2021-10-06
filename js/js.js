@@ -6,14 +6,14 @@ $(function() {
       if (appear == false) {
         appear = true;
         pagetop.stop().animate({
-          'bottom': '50px' //下から50pxの位置に
+          'bottom': '100px' //下から100pxの位置に
         }, 300); //0.3秒かけて現れる
       }
     } else {
       if (appear) {
         appear = false;
         pagetop.stop().animate({
-          'bottom': '-50px' //下から-50pxの位置に
+          'bottom': '-100px' //下から-50pxの位置に
         }, 300); //0.3秒かけて隠れる
       }
     }
