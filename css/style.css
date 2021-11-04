@@ -64,7 +64,7 @@ div{
     font-family: 'myfont'; /* フォント名 */
     /* フォーマットごとにパスを指定 */
     src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
-  }
+}
   /* トップへ戻る */
   #page_top{
       transform: scale(2,2);
