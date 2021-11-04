@@ -25,6 +25,7 @@ header{
     text-decoration: none;
     color: black;
     font-size: large;
+    font-size: 2em;
 }
 ol{
     margin: 3em;             /* 焙煎豆提供店の位置調整 */
