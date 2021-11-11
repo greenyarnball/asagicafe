@@ -16,6 +16,16 @@ header{
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,25);
 }
+header ul{
+    overflow: hidden;
+    list-style: none;
+    margin: 0 auto;
+    z-index: 2;
+}
+header li{
+    display: inline-block;
+    margin: 1em;
+}
 .logo{
     margin-top: 10px;
     margin-left: 30px;
@@ -27,37 +37,21 @@ header{
     font-size: large;
     font-size: 2em;
 }
-ol{
-    margin: 3em;             /* 焙煎豆提供店の位置調整 */
-    list-style: none;        /* 番号非表示*/
-}
-li{
-    margin: 1em;
-}
+
 /*商品を二列で並べる*/
-#colum ul{
-    width: clac(100 + 10)px;
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;    /*複数行に折り返す*/
+    flex-wrap: wrap;
 }
-ul{
-    overflow: hidden;
-    list-style: none;
-    margin: 0 auto;
-    z-index: 2;
+.item{
+    background-color: gray;
+    color: white;
+    margin: 5px;
+    width: calc(50% - 10px);
 }
-ul li{
-    display: inline-block;
-    /* padding: 0 0.5em 0 0; */
-}
-h2{
-    text-align: left;
-    margin: 20px;
-    padding: 10px;
-    font-family:serif;
-    font-size: 50px;
-    text-shadow: 0px 1px 1px black;
-} 
 a{
     clear: both;
     text-decoration: none;
@@ -73,7 +67,7 @@ div{
     src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
 }
   /* トップへ戻る */
-  #page_top{
+#page_top{
       transform: scale(2,2);
       width: 50px;
       height: 50px;
@@ -137,6 +131,9 @@ p{
 }
 /* 画像右寄せ */
 .main-images{
+    width: 10em;
+    height: 10em;
+    object-fit: cover;  /*縦横比維持したままトリミング*/
     float:right;
     border-radius: 25% 10%;
     padding: 0 50px 30px 0;
@@ -151,12 +148,6 @@ p{
     width: 400px;
     height: 400px;
 }
-bean{
-    padding: 20px;
-    border: 1px solid bisque;
-    background: beige;
-}
-
 .transform{
     margin: 6em 0 0 0;
     transform: scale(1.2);
