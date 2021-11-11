@@ -47,7 +47,7 @@ header li{
     flex-wrap: wrap;
 }
 .item{
-    background-color: gray;
+    background-color:ivory;
     color: white;
     margin: 5px;
     width: calc(50% - 10px);
