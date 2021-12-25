@@ -139,11 +139,11 @@ p{
     border-radius: 25% 10%;
     padding: 50px 0 0 50px;
 }
-/*マスターの画像*/
+/*店主の画像専用*/
 .images2{
     padding: 25px 0 0 25px;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 bean{
     padding: 20px;
