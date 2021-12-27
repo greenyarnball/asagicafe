@@ -124,6 +124,13 @@ div{
     padding: 0 10em;
     padding-left: 2em;
 }
+/*URL用のcss*/
+.text3{
+    font-family: myfont;
+    font-size: 1em;
+    padding: 0 10em;
+    padding-left: 2em;
+}
 p{
     font-family:serif;
     margin: 10;
