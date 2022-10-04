@@ -43,6 +43,10 @@ header li{
     justify-content: space-around;
     padding: 5%;
 }
+.event-top{
+    font-size: 8em;
+    text-align: center
+}
 .eventbox{
     text-align: center;
     padding: 1em;
