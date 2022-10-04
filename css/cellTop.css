@@ -38,7 +38,9 @@ header{
     padding: 1em;
 }
 .event-top{
-    font-size: 8em;
+    font-family: myfont;
+    margin :20px;
+    font-size: 5em;
     text-align: center
 }
 ol{

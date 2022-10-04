@@ -44,7 +44,9 @@ header li{
     padding: 5%;
 }
 .event-top{
-    font-size: 8em;
+    font-family: myfont;
+    margin :20px;
+    font-size: 5em;
     text-align: center
 }
 .eventbox{
