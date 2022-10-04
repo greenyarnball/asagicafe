@@ -37,7 +37,16 @@ header li{
     font-size: large;
     font-size: 2em;
 }
-
+/* イベント情報 */
+.event{
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+.eventbox{
+    text-align: center;
+    padding: 1em;
+}
 /*商品を二列で並べる*/
 .list{
     list-style-type: none;
