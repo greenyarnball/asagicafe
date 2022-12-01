@@ -38,24 +38,30 @@ header li{
     font-size: 2em;
 }
 /* イベント情報 */
-.event{
-    display: flex;
-    justify-content: space-around;
-    padding: 5%;
-}
 .event-top{
     font-family: myfont;
-    margin :20px;
     font-size: 5em;
-    text-align: center
+    text-align: center;
 }
+.event{
+    /* safari1対応 */
+    display:-webkit-box;
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;  
+    justify-content: space-around;
+}
+
 .eventbox{
+    /* safari1対応 */
+    width: 40%;
+
     text-align: center;
     padding: 1em;
 }
 /*商品を二列で並べる*/
 .list{
-    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
