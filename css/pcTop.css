@@ -44,7 +44,7 @@ header li{
     text-align: center;
 }
 .event{
-    /* safari1対応 */
+    /* safari対応 */
     display:-webkit-box;
     -webkit-flex-wrap: wrap;
     display: flex;
@@ -54,7 +54,7 @@ header li{
 }
 
 .eventbox{
-    /* safari1対応 */
+    /* safari対応 */
     width: 40%;
 
     text-align: center;
@@ -64,6 +64,10 @@ header li{
 .list{
     padding: 0;
     margin: 0;
+    /* safari対応 */
+    display:-webkit-box;
+    display:-ms-flexbox;
+    -webkit-flex-wrap: wrap;
     display: flex;
     flex-wrap: wrap;
 }
