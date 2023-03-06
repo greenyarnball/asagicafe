@@ -33,7 +33,19 @@ header{
     justify-content: space-around;
     padding: 5%;
 }
+.event{
+    /* safari対応 */
+    display:-webkit-box;
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;  
+    justify-content: space-around;
+}
 .eventbox{
+    /* safari対応 */
+    width: 90%;
+
     text-align: center;
     padding: 1em;
 }
