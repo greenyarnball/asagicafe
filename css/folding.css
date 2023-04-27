@@ -1,0 +1,25 @@
+details[open] .open{
+    display: none;
+}
+details:not([open]) .close{
+    display: none;
+}
+summary{
+    display: block;/* アイコンを消す */
+    padding-left: 10em;
+}
+.element{
+    display: flex;
+}
+.element img{
+    vertical-align:middle
+}
+.element p{
+    font-size: 3em;
+}
+summary:before{
+}
+summary:after{   
+    width: 1em;
+    height: 1em;
+}
