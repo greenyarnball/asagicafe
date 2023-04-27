@@ -1,14 +1,31 @@
+.list{
+    padding-top: 1em;
+}
+details{
+    padding: 1em 1em 1em 1em;
+}
 details[open] .open{
     display: none;
 }
 details:not([open]) .close{
     display: none;
 }
+p.content{
+    padding: 0 5em 0 5em;
+    font-size:2em;
+}
 summary{
+    border-radius: 5px;
+    background-color:wheat;
+    border: solid 1px gray;
+    padding-top: 1em;
     display: block;/* アイコンを消す */
-    padding-left: 10em;
+}
+summary:hover{
+    cursor: pointer;/*カーソルが指マークになる*/
 }
 .element{
+    padding-bottom: 1em;
     display: flex;
 }
 .element img{
