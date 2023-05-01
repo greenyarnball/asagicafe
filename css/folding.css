@@ -32,18 +32,13 @@ div.element img{
 div.element p{
     font-size: 3em;
 }
-summary:before{
-}
-summary:after{   
-    width: 1em;
-    height: 1em;
-}
-p.content{
+div.content{
     font-size:2em;
-    margin: 2em 0 2em;
-    padding: 0 5em 0 5em;
+    margin: 1em 0 2em;
+    padding: 0 2em 0 3em;
 }
 p.cost{
+    padding-top: 1em;
+    font-size:0.8em;
     text-align: right;
-    font-size:2em;
 }
