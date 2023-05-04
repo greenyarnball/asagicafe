@@ -1,9 +1,10 @@
 @charset "utf-8";
 .list{
-    padding-top: 1em;
+    padding-top: 2em;
 }
 details{
-    padding: 1em 1em 1em 1em;
+    font-size: 2em;
+    padding: 0 1em 0.5em 1em;
 }
 /*豆の画像差し替え*/
 details[open] .open{
@@ -30,16 +31,11 @@ summary:hover{
 div.element img{
     vertical-align:middle
 }
-div.element p{
-    font-size: 3em;
-}
-div.content{
-    font-size:2em;
+div .content{
     margin: 1em 0 2em;
     padding: 0 2em 0 3em;
 }
-p.cost{
+.cost{
     padding-top: 1em;
-    font-size:0.8em;
     text-align: right;
 }
