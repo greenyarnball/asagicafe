@@ -1,0 +1,22 @@
+.contents{
+    padding: 2em 2em 0 2em;
+}
+.title{
+    font-size: 2em;
+    border-radius: 0.5em;
+    background-color:wheat;
+    border: solid 0.1em gray;
+    padding: 0.5em;
+    display: block;/* アイコンを消す */
+}
+/*豆の画像差し替え*/
+
+/*カーソルが指マークになる*/
+.title:hover {
+    cursor: pointer;
+}
+.txt{
+	display: none;
+    padding: 1em;
+    font-size: 2em;
+}
