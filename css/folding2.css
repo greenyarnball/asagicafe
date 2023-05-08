@@ -13,6 +13,12 @@
 .title:hover {
     cursor: pointer;
 }
+.hot{
+    color: red;
+}
+.ice{
+    color: blue;
+}
 .txt{
 	display: none;
     padding: 2em;
