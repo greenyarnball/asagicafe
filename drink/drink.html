@@ -16,6 +16,8 @@
         <link href="../css/style.css" rel="stylesheet" media="all">
         <link href="../css/folding.css" rel="stylesheet" media="all">
         <link rel="icon" href="../img/favicon.ico">
+        <!-- SRI Hash Generator使用 -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
         <script src="../js/folding.js"></script>
 </head>
 <body>
@@ -33,230 +35,173 @@
         </ul>
     </nav>
 </header>
-<div class="list">
-    <details>
-        <summary src="toggle_title">
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    本日の焼きたてかまどコーヒー　(ホット)
-                </p>
-            </div>
-        </summary>
-        <div  class="content">
-            <p>
-                かまどで午前中に焙煎したばかりのコーヒー豆をあえて使用。
-                火や薪の風合い残るここだけのコーヒーです。
-                銘柄は日替わりです。
-            </p>
-            <div class="cost">
-                <p>
-                    ４２０円
-                    <br>(カップにたっぷりサイズ　+１００円)
-                </p>
-            </div>
-        </div>
-    </details>
-    <details>
-        <summary src="toggle_title">
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ブレンドコーヒー　～あさぎブレンド～ (ホット)
-                </p>
-            </div>
-        </summary>
-        <div  class="content">
-            <p>
-                当店の看板、あさぎブレンドを使用したホットコーヒー。
-                苦味・酸味・甘みの突出の無い飲みやすい味わいです            
-            </p>
-            <p class="cost">
-                ４２０円
-                <br>(カップにたっぷりサイズ　+１００円)
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary src="toggle_title">
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ストレートコーヒー
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                当店取扱い銘柄は全てドリンク提供可能です。
-                お好みの銘柄をご指定ください。
-                カフェインレスもこちらから。            
-            </p>
-            <p class="cost">
-                ４５０円～
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary src="toggle_title">
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    カフェオレ　(ホット・アイス)
-                </p>
-            </div>
-        </summary>
-        <div  class="content">
-            <p>
-                しっかりとコーヒー感を残している当店のカフェオレ。
-                豆はやまぶきブレンドを使用しています。            
-            </p>
-            <p class="cost">
-                ４５０円
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary src="toggle_title">
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ふわっと モカｘモカ オーレ　(ホット)   　　　(11月～4月限定)
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                ふわふわのチョコ入りフォームミルクと
-                エチオピアのドリップコーヒーでカフェモカ風の甘いオーレに。            
-            </p>
-            <p class="cost">
-                58０円
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary>
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ドリップアイスコーヒー　～やまぶきブレンド～
-                </p>
-            </div>
-        </summary>
-        <div  class="content">
-        <p>当店もう1つのブレンド、やまぶきブレンドを使用。
-            キリっとした苦味のあるアイスコーヒーです。        
+<div class="contents">
+	<div class="title">
+        <p>本日の焼きたてかまどコーヒー<br>&nbsp;(<span class="hot">ホット</span>)</p>
+    </div>
+    <div class="txt">
+        <p>
+            かまどで午前中に焙煎したばかりのコーヒー豆をあえて使用。
+            火や薪の風合い残るここだけのコーヒーです。
+            銘柄は日替わりです。
+        </p>
+        <p class="cost">
+            ４２０円
+            <br>(カップにたっぷりサイズ　+１００円)
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ブレンドコーヒー<br>～あさぎブレンド～ (<span class="hot">ホット</span>)</p>
+    </div>
+    <div class="txt">
+        <p>
+            当店の看板、あさぎブレンドを使用したホットコーヒー。
+            苦味・酸味・甘みの突出の無い飲みやすい味わいです      
+        </p>
+        <p class="cost">
+            ４２０円
+            <br>(カップにたっぷりサイズ　+１００円)
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ストレートコーヒー</p>
+    </div>
+    <div class="txt">
+        <p>
+            当店取扱い銘柄は全てドリンク提供可能です。
+            お好みの銘柄をご指定ください。
+            カフェインレスもこちらから。     
+        </p>
+        <p class="cost">
+            ４５０円～
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>カフェオレ&nbsp;(<span class="hot">ホット</span>・<span class="ice">アイス</span>)</p>
+    </div>
+    <div class="txt">
+        <p>
+            しっかりとコーヒー感を残している当店のカフェオレ。
+            豆はやまぶきブレンドを使用しています。            
+        </p>
+        <p class="cost">
+            ４５０円
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ふわっと モカｘモカ オーレ&nbsp;(<span class="hot">ホット</span>) 
+            <br>&nbsp;(11月～4月限定)</p>
+    </div>
+    <div class="txt">
+        <p>
+            ふわふわのチョコ入りフォームミルクと
+            エチオピアのドリップコーヒーでカフェモカ風の甘いオーレに。  
+        </p>
+        <p class="cost">
+            ５８０円
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ドリップアイスコーヒー<br>～やまぶきブレンド～</p>
+    </div>
+    <div class="txt">
+        <p>
+            当店もう1つのブレンド、やまぶきブレンドを使用。
+            キリっとした苦味のあるアイスコーヒーです。
         </p>
         <p class="cost">
             ４２０円
         </p>
-        </div>
-    </details>
-    <details>
-        <summary>
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    水出しアイスコーヒー　～雪男の目覚め～
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                雪男スペシャルを使用し一晩寝かせて水出し抽出。
-                あっさりしつつも独特な風合いの特別なアイスコーヒーです。        
-            </p>
-            <p class="cost">
-                ４７０円
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary>
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ミルク出しアイスコーヒー　～ロイヤルミルクコーヒー～　(5月～10月限定)
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                エチオピアの豆を牛乳に漬け込み一晩かけて抽出。
-                ロイヤルミルクティーのようなコーヒーです。
-            </p>
-            <p class="cost">
-                ５２０円
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary>
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ジュース　(りんご・ぶどう)　(アイス)
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                果汁100％ジュースを使用しています。
-            </p>
-            <p class="cost">
-                ４２０円
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary>
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    紅茶　（ホット・アイス）
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                アールグレイを使用しています。
-                ミルクティーご希望の方はお申しつけ下さい。        
-            </p>
-            <p class="cost">
-                ４５０円
-            </p>
-        </div>
-    </details>
-    <details>
-        <summary>
-            <div class="element">
-                <p>
-                    <img class="open" src="../img/raw_bean.png" weigh="10em" height="65">
-                    <img class="close" src="../img/bean.png" weigh="10em" height="65">
-                    ココア　(ホット・アイス)
-                </p>
-            </div>
-        </summary>
-        <div class="content">
-            <p>
-                バンホーテンココアと牛乳を使用してコクのある仕上げにしています。
-            </p>
-            <p class="cost">
-                ４５０円
-            </p>
-        </div>
-    </details>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>水出しアイスコーヒー<br>～雪男の目覚め～</p>
+    </div>
+    <div class="txt">
+        <p>
+            雪男スペシャルを使用し一晩寝かせて水出し抽出。
+            あっさりしつつも独特な風合いの特別なアイスコーヒーです。  
+        </p>
+        <p class="cost">
+            ４７０円
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ミルク出しアイスコーヒー<br>～ロイヤルミルクコーヒー～
+            <br>&nbsp;(5月～10月限定)</p>
+    </div>
+    <div class="txt">
+        <p>
+            エチオピアの豆を牛乳に漬け込み一晩かけて抽出。
+            ロイヤルミルクティーのようなコーヒーです。
+        </p>
+        <p class="cost">
+            ５２０円
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ジュース&nbsp;(りんご・ぶどう)&nbsp;(<span class="ice">アイス</span>)</p>
+    </div>
+    <div class="txt">
+        <p>
+            果汁100％ジュースを使用しています。
+        </p>
+        <p class="cost">
+            ４２０円
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>紅茶&ensp;（<span class="hot">ホット</span>・<span class="ice">アイス</span>）</p>
+    </div>
+    <div class="txt">
+        <p>
+            アールグレイを使用しています。
+            ミルクティーご希望の方はお申しつけ下さい。
+        </p>
+        <p class="cost">
+            ４５０円
+        </p>
+    </div>
+</div>
+
+<div class="contents">
+	<div class="title">
+        <p>ココア&ensp;(<span class="hot">ホット</span>・<span class="ice">アイス</span>)</p>
+    </div>
+    <div class="txt">
+        <p>
+            バンホーテンココアと牛乳を使用してコクのある仕上げにしています。
+        </p>
+        <p class="cost">
+            ４５０円
+        </p>
+    </div>
 </div>
 </body>
 </html>

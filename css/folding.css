@@ -1,35 +1,31 @@
 @charset "utf-8";
-.list{
-    padding-top: 2em;
+.contents{
+    padding: 2em 2em 0 2em;
 }
-details{
+.title{
     font-size: 2em;
-    padding: 0 1em 0.5em 1em;
-}
-/* 要素のレイアウト */
-summary{
-    border-radius: 5px;
+    border-radius: 0.5em;
     background-color:wheat;
-    border: solid 1px gray;
-    padding-top: 1em;
+    border: solid 0.1em gray;
+    padding: 0.5em;
     display: block;/* アイコンを消す */
 }
-summary:hover{
-    cursor: pointer;/*カーソルが指マークになる*/
+/*カーソルが指マークになる*/
+.title:hover {
+    cursor: pointer;
 }
-.element{
-    padding-bottom: 1em;
-    display: flex;
+.hot{
+    color: red;
 }
-div.element img{
-    vertical-align:middle
+.ice{
+    color: blue;
 }
-div .content{
-    margin: 1em 0 2em;
-    padding: 0 2em 0 3em;
+.txt{
+	display: none;
+    padding: 2em;
+    font-size: 1.5em;
 }
 .cost{
-    font-size: 0.2em;
     padding-top: 1em;
     text-align: right;
 }
