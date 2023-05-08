@@ -6,13 +6,6 @@ details{
     font-size: 2em;
     padding: 0 1em 0.5em 1em;
 }
-/*豆の画像差し替え*/
-details[open] .open{
-    display: none;
-}
-details:not([open]) .close{
-    display: none;
-}
 /* 要素のレイアウト */
 summary{
     border-radius: 5px;
@@ -36,6 +29,7 @@ div .content{
     padding: 0 2em 0 3em;
 }
 .cost{
+    font-size: 0.2em;
     padding-top: 1em;
     text-align: right;
 }

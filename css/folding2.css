@@ -9,14 +9,16 @@
     padding: 0.5em;
     display: block;/* アイコンを消す */
 }
-/*豆の画像差し替え*/
-
 /*カーソルが指マークになる*/
 .title:hover {
     cursor: pointer;
 }
 .txt{
 	display: none;
-    padding: 1em;
-    font-size: 2em;
+    padding: 2em;
+    font-size: 1.5em;
+}
+.cost{
+    padding-top: 1em;
+    text-align: right;
 }
