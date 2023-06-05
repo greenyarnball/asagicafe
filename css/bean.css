@@ -105,9 +105,8 @@ h2{
 }
 /*商品を二列で並べる*/
 #colum ul{
-    width: clac(100 + 10)px;
     display: flex;
-    flex-wrap: wrap;    //複数行に折り返す
+    flex-wrap: wrap;    /*複数行に折り返す*/
 }
 /*box全体をrelative*/
 .box{
