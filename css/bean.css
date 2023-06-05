@@ -99,10 +99,6 @@ h2{
     background-color:wheat;
     border: solid 1px gray;
 }
-.beancup{
-    width: 30vw ;
-    height: auto;
-}
 /*商品を二列で並べる*/
 #colum ul{
     display: flex;
@@ -125,7 +121,7 @@ h2{
 #colum li{
     list-style: none;
     width: calc(50% - 20px);
-    padding: 0 10px 10px;
+    padding: 0 5px 5px 5px;
 }
 #colum div{
     text-align: center;
@@ -134,17 +130,21 @@ h2{
 #colum img{
     border-radius: 90em;
 }
+.beancup{
+    width: 30vw;
+    height: auto;
+}
 #colum li p{
     text-align: center;
     font-size: 3vW;
 }
 #colum li span{
     text-align: right;
-    margin-right: 10px;
+    margin: 5px;
     font-size: 20px;
 }
-  /* トップへ戻る */
-  #page_top{
+/* トップへ戻る */
+#page_top{
     z-index: 1;
     transform: scale(2,2);
     width: 50px;
@@ -156,14 +156,14 @@ h2{
     background: #00A4AC;
     opacity: 0.6;
     border-radius: 50%;
-  }
+}
 #page_top a{
     position: relative;
     display: block;
     width: 50px;
     height: 50px;
     text-decoration: none;
-  }
+}
 #page_top a::before{
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
@@ -179,4 +179,4 @@ h2{
     left: 0;
     margin: auto;
     text-align: center;
-  }
+}
