@@ -1,0 +1,87 @@
+@charset "utf-8";
+/*ヘッダーのデザイン調整*/
+header{
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    z-index: 10;
+    background: whitesmoke;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,25);
+}
+.headerbox1{
+    display: flex;
+    justify-content: space-around;
+    height: 5em;
+    padding-bottom: 1vw;
+}
+.logo{
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 70%;
+    height: auto;
+    vertical-align: middle;
+}  
+.mailform{
+    position: absolute;
+    right: 0;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 1.2em;
+    padding: 0.8em;
+    color: #000;
+    text-decoration: none;
+    background-color:  #00A5BF;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+.mailform:hover{
+	opacity: 0.5;
+}
+.headerbox2{
+    width: 100%;
+    height: 100px;
+    padding-bottom: 20px;
+}
+header ul{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    z-index: 2;
+}
+header li{
+    height: 1em;
+    position: relative;
+    width: 10%;
+    text-align: center;
+}
+.line{
+    margin: 0 0.1rem;
+    width: 3px;
+    height: 50px;
+    background-color: #000;
+}
+header li img{
+    width: 100%;
+    max-width: 50px;
+}
+.rotate:hover{
+    opacity: 0.6;
+}
+.adjust{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-size: 1em;
+}
+header li p{
+    text-align: center;
+}
+header ul li{
+    display: inline-block;
+}
