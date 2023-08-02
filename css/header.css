@@ -2,11 +2,20 @@
 /*ヘッダーのデザイン調整*/
 header{
     width: 100%;
-    height: auto;
     background-size: contain;
     background: whitesmoke;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,25);
+}
+@media (min-width: 992px){
+    header{
+        height: 220px;
+    }
+}
+@media (max-width: 992px){
+    header{
+        height: 260px;
+    }
 }
 .headerbox1{
     display: flex;
@@ -55,8 +64,33 @@ header ul{
 }
 header li{
     height: 1em;
+    display: inline-block;
     position: relative;
-    width: 10%;
+    width: 15%;
+    text-align: center;
+}
+header li img{
+    width: 100%;
+    max-width: 70px;
+}
+@media (min-width: 992px){
+    .adjust{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+}
+@media (max-width: 992px){
+    .adjust{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+}
+.rotate:hover{
+    opacity: 0.6;
+}
+header li p{
     text-align: center;
 }
 .line{
@@ -65,22 +99,11 @@ header li{
     height: 50px;
     background-color: #000;
 }
-header li img{
-    width: 100%;
-    max-width: 50px;
-}
-.adjust{
-    text-decoration: none;
-    color: black;
-    font-size: large;
-    font-size: 16px;
-}
-.rotate:hover{
-    opacity: 0.6;
-}
-header li p{
-    text-align: center;
-}
-header ul li{
-    display: inline-block;
+@media (max-width: 992px){
+    .line{
+        margin: 0 0.1rem;
+        width: 1px;
+        height: 120px;
+        background-color: #000;
+    }
 }
