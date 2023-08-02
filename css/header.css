@@ -69,14 +69,14 @@ header li img{
     width: 100%;
     max-width: 50px;
 }
-.rotate:hover{
-    opacity: 0.6;
-}
 .adjust{
     text-decoration: none;
     color: black;
     font-size: large;
-    font-size: 1em;
+    font-size: 16px;
+}
+.rotate:hover{
+    opacity: 0.6;
 }
 header li p{
     text-align: center;
