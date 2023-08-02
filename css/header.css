@@ -5,7 +5,6 @@ header{
     background-size: contain;
     background: whitesmoke;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0,0,0,25);
 }
 .headerbox1{
     display: flex;
