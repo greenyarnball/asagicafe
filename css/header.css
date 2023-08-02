@@ -34,6 +34,7 @@ header{
     border-radius: 20px;
     vertical-align: middle;
 }
+/*PCのcss*/
 @media (min-width: 992px){
     header{
         height: 220px;
@@ -53,7 +54,11 @@ header{
     .headerbox1{
     padding-bottom: 1vw;
     }
+    header li{
+        width: 12%;
+    }
 }
+/*タブレットのcss*/
 @media (max-width: 992px){
     header{
         height: 300px;
@@ -72,6 +77,9 @@ header{
     }
     .headerbox1{
     padding-bottom: 4vw;
+    }
+    header li{
+        width: 15%;
     }
 }
 .mailform:hover{
@@ -94,7 +102,6 @@ header li{
     height: 1em;
     display: inline-block;
     position: relative;
-    width: 15%;
     text-align: center;
 }
 header li img{
