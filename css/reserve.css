@@ -1,0 +1,64 @@
+@charset "utf-8";
+* {
+    margin:0; padding:0;
+  }
+body{
+    background-color: beige;
+}
+/*Web フォントを定義*/
+@font-face {
+    font-family: 'myfont'; /* フォント名 */
+    /* フォーマットごとにパスを指定 */
+    src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
+}
+  /* トップへ戻る */
+  #page_top{
+      transform: scale(2,2);
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      right: 50px;
+      bottom: -100px;
+      left: auto;
+      background: #00A4AC;
+      opacity: 0.6;
+      border-radius: 50%;
+    }
+#page_top a{
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      text-decoration: none;
+    }
+#page_top a::before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f102';
+      font-size: 25px;
+      color: #fff;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: -5px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+    }
+.menu{
+    font-family: myfont;
+    margin :20px;
+    font-size: 2em;
+    /* text-shadow: 0em 0em 0.1em  black; */
+    color: black;
+    border-bottom: 2px solid #00A5BF;
+}
+.text{
+    color: black;
+    font-family: myfont;
+    font-size: 1em;
+    padding: 0 10em;
+    padding-left: 2em;
+}
