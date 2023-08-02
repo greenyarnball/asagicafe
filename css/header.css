@@ -34,6 +34,11 @@ header{
     border-radius: 20px;
     vertical-align: middle;
 }
+.headerbox2{
+    width: 100%;
+    height: 100px;
+    padding-bottom: 20px;
+}
 /*PCのcss*/
 @media (min-width: 992px){
     header{
@@ -84,11 +89,6 @@ header{
 }
 .mailform:hover{
 	opacity: 0.5;
-}
-.headerbox2{
-    width: 100%;
-    height: 100px;
-    padding-bottom: 20px;
 }
 header ul{
     display:flex;
