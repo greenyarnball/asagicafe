@@ -5,18 +5,15 @@
 }
 body{
     background-color: beige;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* backdrop-filter: blur(12px);
-    background-size: cover; */
 }
 h2{
     text-align: left;
     margin: 20px;
     padding: 10px;
     font-family:serif;
-    font-size: 50px;
+    font-size: 60px;
     text-shadow: 0px 1px 1px black;
+    border-bottom: 2px solid #00A5BF;
 } 
 /*Web フォントを定義*/
 @font-face {
@@ -78,9 +75,12 @@ h2{
 .text2{
     color: black;
     font-family: myfont;
-    font-size: 20px;         /*textとフォントサイズが異なる*/
+    font-size: 30px;         /*textとフォントサイズが異なる*/
     padding: 0 10em;
-    padding-left: 2em;
+    padding-left: 40px;
+}
+.link{
+    color: #00A5BF;
 }
 /*URL用のcss*/
 .text3{
@@ -88,4 +88,8 @@ h2{
     font-size: 1em;
     padding: 0 10em;
     padding-left: 2em;
+}
+.btn-primary{
+    background-color: #00A5BF;
+    width: 20%;
 }
