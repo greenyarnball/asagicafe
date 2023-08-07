@@ -82,6 +82,9 @@ h2{
 .link{
     color: #00A5BF;
 }
+.link:hover{
+    opacity: 0.5;
+}
 /*URL用のcss*/
 .text3{
     font-family: myfont;
