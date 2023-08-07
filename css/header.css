@@ -21,6 +21,7 @@ header{
     vertical-align: middle;
 }  
 .mailform{
+    height: 60px;
     position: absolute;
     right: 0;
     text-align: right;
@@ -35,20 +36,19 @@ header{
 }
 .headerbox2{
     width: 100%;
-    padding-bottom: 20px;
 }
 /*PCのcss*/
 @media (min-width: 992px){
     header{
         height: 230px;
     }
+    .mailform{
+        font-size: 18px;
+    }
     .adjust{
         text-decoration: none;
         color: black;
         font-size: 16px;
-    }
-    .mailform{
-    font-size: 1.2em;
     }
     .line{
         width: 3px;
@@ -67,7 +67,7 @@ header{
         height: 280px;
     }
     .mailform{
-    font-size: 2.0em;
+        font-size: 24px;
     }
     .adjust{
         text-decoration: none;
