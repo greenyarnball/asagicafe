@@ -9,7 +9,7 @@ header{
 .headerbox1{
     display: flex;
     justify-content: space-around;
-    height: 5em;
+    height: 120px;
 }
 .logo{
     position: absolute;
@@ -35,13 +35,12 @@ header{
 }
 .headerbox2{
     width: 100%;
-    height: 100px;
     padding-bottom: 20px;
 }
 /*PCのcss*/
 @media (min-width: 992px){
     header{
-        height: 220px;
+        height: 230px;
     }
     .adjust{
         text-decoration: none;
@@ -65,7 +64,7 @@ header{
 /*タブレットのcss*/
 @media (max-width: 992px){
     header{
-        height: 300px;
+        height: 280px;
     }
     .mailform{
     font-size: 2.0em;
