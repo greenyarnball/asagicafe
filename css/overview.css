@@ -58,7 +58,8 @@ h2{
 .menu{
     font-family: myfont;
     margin :20px;
-    font-size: 2em;
+    font-size: 50px;
+    padding-left: 10px;
     /* text-shadow: 0em 0em 0.1em  black; */
     color: black;
     border-bottom: 2px solid #00A5BF;
@@ -66,27 +67,31 @@ h2{
 .text{
     color: black;
     font-family: myfont;
-    font-size: 1em;
-    padding-left: 2em;
+    font-size: 30px;
+    line-height: 1.5;
+    padding-left: 100px;
+    padding-right: 100px;
+    
 }
 .painter{
     text-decoration: none;
-    color: black;
     font-size: 30px;
 }
 .painter p{
-    padding-left: 1em;
+    color: #00A5BF;
+    font-size: 60px;
+    padding-left: 40px;
 }
 /*店主の画像専用*/
 .images{
-    padding: 25px 0 0 25px;
-    width: 200px;
-    height: 200px;
+    padding: 25px 0 25px 100px;
+    width: 400px;
+    height: auto;
 }
 /*URL用のcss*/
 .text3{
     font-family: myfont;
-    font-size: 1em;
-    padding: 0 10em;
-    padding-left: 2em;
+    color: #00A5BF;
+    font-size: 40px;
+    padding-left: 40px;
 }
