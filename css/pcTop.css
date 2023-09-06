@@ -6,8 +6,6 @@
 body{
     background-color: whitesmoke;
     background-repeat: no-repeat;
-    /* backdrop-filter: blur(12px);
-    background-size: cover; */
 }
 /* イベント情報 */
 .event-top{
@@ -75,7 +73,6 @@ div{
       text-decoration: none;
     }
 #page_top a::before{
-      font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       content: '\f102';
       font-size: 25px;
@@ -110,7 +107,6 @@ div{
     padding-left: 2em;
 }
 p{
-    font-family:serif;
     margin: 10;
     padding: 100;
 }
