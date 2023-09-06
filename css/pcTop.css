@@ -1,4 +1,9 @@
 @charset "utf-8";
+/*Web フォントを定義*/
+@font-face {
+    font-family: 'myfont'; /* フォント名 */
+    src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
+}
 * {
     margin: 0;
     padding: 0;
@@ -54,12 +59,6 @@ a{
 }
 div{
     clear: both;
-}
-/*Web フォントを定義*/
-@font-face {
-    font-family: 'myfont'; /* フォント名 */
-    /* フォーマットごとにパスを指定 */
-    src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
 }
   /* トップへ戻る */
 #page_top{
