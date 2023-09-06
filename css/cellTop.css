@@ -1,12 +1,6 @@
 @charset "utf-8";
 * {
     margin:0; padding:0;
-  }
-/*Web フォントを定義*/
-@font-face {
-    font-family: 'myfont'; /* フォント名 */
-    /* フォーマットごとにパスを指定 */
-    src: url(Tanugo_1_10/ttf/Tanugo-TTF-Bold.ttf) format("opentype");
 }
 body{
     background-color: beige;
@@ -32,7 +26,6 @@ body{
     padding: 1em;
 }
 .event-top{
-    font-family: myfont;
     margin :20px;
     font-size: 5em;
     text-align: center
@@ -103,7 +96,6 @@ h2{
     text-decoration: none;
 }
 .menu{
-    font-family: myfont;
     font-size: 3em;
     color: black;
     margin : 20px;
@@ -111,14 +103,12 @@ h2{
 }
 .text{
     color: black;
-    font-family: myfont;
     font-size: 1em;
     padding: 0 10em;
     padding-left: 2em;
 }
 .text2{
     color: black;
-    font-family: myfont;
     font-size: 20px;         /*textとフォントサイズが異なる*/
     padding: 0 10em;
     padding-left: 2em;
