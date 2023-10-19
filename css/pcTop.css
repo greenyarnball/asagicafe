@@ -54,16 +54,17 @@ div{
 }
   /* トップへ戻る */
 #page_top{
-      transform: scale(2,2);
-      width: 50px;
-      height: 50px;
-      position: fixed;
-      right: 50px;
-      bottom: -100px;
-      left: auto;
-      background: #00A4AC;
-      opacity: 0.6;
-      border-radius: 50%;
+    font-family: "Font Awesome 5 FREE";
+    transform: scale(2,2);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: -100px;
+    left: auto;
+    background: #00A4AC;
+    opacity: 0.6;
+    border-radius: 50%;
     }
 #page_top a{
       position: relative;

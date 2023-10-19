@@ -55,6 +55,7 @@ h2{
 }
   /* トップへ戻る */
 #page_top{
+    font-family: "Font Awesome 5 FREE";
     transform: scale(2,2);
     width: 50px;
     height: 50px;
