@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>あなたに合うコーヒー豆診断｜手焙煎珈琲あさぎ</title>
+<meta name="description" content="5つの味わいと風味の好みから、手焙煎珈琲あさぎのおすすめコーヒー豆を診断します。">
+<style>
+:root {
+  --bg:#f7f4ef; --card:#fff; --ink:#2e2925; --muted:#776e67;
+  --accent:#7b563d; --accent2:#a77b58; --line:#e7dfd7; --soft:#f0e8df;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.7}
+.container{width:min(900px,92vw);margin:auto}
+.hero{padding:64px 0 40px;text-align:center}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;color:var(--accent);font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.25;margin:10px 0 18px}
+.lead{color:var(--muted);max-width:680px;margin:auto}
+.progress-wrap{position:sticky;top:0;z-index:10;background:rgba(247,244,239,.94);backdrop-filter:blur(8px);padding:12px 0;border-bottom:1px solid var(--line)}
+.progress{height:7px;background:#e6ddd5;border-radius:99px;overflow:hidden}
+.progress>div{height:100%;background:var(--accent);width:0;transition:.25s}
+.step-label{font-size:.8rem;color:var(--muted);margin-top:6px;text-align:right}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:24px 0;box-shadow:0 8px 30px rgba(55,40,30,.05)}
+.card h2{margin:0 0 8px;font-size:1.45rem}
+.question-note{color:var(--muted);margin-top:0}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:20px}
+.scale button{border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px 5px;cursor:pointer;transition:.2s;color:var(--ink)}
+.scale button:hover{border-color:var(--accent2);transform:translateY(-1px)}
+.scale button.selected{background:var(--accent);color:#fff;border-color:var(--accent)}
+.scale .num{display:block;font-weight:800;font-size:1.15rem}
+.scale .txt{display:block;font-size:.72rem;margin-top:3px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.feature{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
+.feature h3{font-size:1rem;margin:0 0 8px}
+.feature .scale{margin-top:8px}
+.actions{display:flex;gap:12px;justify-content:center;margin:28px 0 70px;flex-wrap:wrap}
+button.primary,.secondary{border:0;border-radius:999px;padding:14px 28px;font-size:1rem;font-weight:700;cursor:pointer}
+.primary{background:var(--accent);color:white}
+.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.primary:disabled{opacity:.4;cursor:not-allowed}
+#result{display:none;padding-bottom:80px}
+.result-head{text-align:center;margin:50px 0 25px}
+.badge{display:inline-block;background:var(--soft);color:var(--accent);padding:5px 12px;border-radius:999px;font-size:.8rem;font-weight:700}
+.result-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin:16px 0}
+.rank{font-size:.8rem;color:var(--accent);font-weight:800}
+.result-title{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.result-title h3{margin:4px 0;font-size:1.35rem}
+.match{font-size:1.25rem;font-weight:900;white-space:nowrap;color:var(--accent)}
+.meta{color:var(--muted);font-size:.9rem}
+.reason{background:var(--soft);padding:12px 14px;border-radius:12px;margin-top:14px}
+.price{font-weight:700;margin-top:12px}
+.purchase{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;padding:11px 18px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.purchase:hover{opacity:.88}
+footer{padding:35px 0 55px;text-align:center;color:var(--muted);font-size:.9rem}
+@media(max-width:650px){
+ .hero{padding-top:42px}
+ .card{padding:20px}
+ .feature-grid{grid-template-columns:1fr}
+ .scale button{padding:10px 2px}
+ .scale .txt{font-size:.65rem}
+ .result-title{display:block}
+ .match{margin-top:8px}
+}
+</style>
+</head>
+<body>
+<header class="hero container">
+  <div class="eyebrow">手焙煎珈琲あさぎ</div>
+  <h1>あなたに合う<br>コーヒー豆診断</h1>
+  <p class="lead">5つの味わいと風味の好みを選ぶだけ。あさぎのコーヒー豆の中から、あなたの好みに近い銘柄をランキングでご紹介します。</p>
+</header>
+
+<div class="progress-wrap">
+  <div class="container">
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="step-label" id="stepLabel">0 / 10 項目</div>
+  </div>
+</div>
+
+<main id="quiz" class="container">
+  <section class="card">
+    <h2>苦味</h2>
+    <p class="question-note">あなたが好きな苦味の強さは？</p>
+    <div class="scale" data-key="苦味"></div>
+  </section>
+
+  <section class="card">
+    <h2>酸味</h2>
+    <p class="question-note">あなたが好きな酸味の強さは？</p>
+    <div class="scale" data-key="酸味"></div>
+  </section>
+
+  <section class="card">
+    <h2>甘味</h2>
+    <p class="question-note">あなたが好きな甘みの強さは？</p>
+    <div class="scale" data-key="甘味"></div>
+  </section>
+
+  <section class="card">
+    <h2>コク</h2>
+    <p class="question-note">あなたが好きなコクの強さは？</p>
+    <div class="scale" data-key="コク"></div>
+  </section>
+
+  <section class="card">
+    <h2>風味・特徴</h2>
+    <p class="question-note">それぞれ、どのくらい好きですか？ 1＝あまり好きではない、5＝とても好き</p>
+    <div class="feature-grid">
+      <div class="feature"><h3>🍫 チョコレート・カカオ</h3><div class="scale" data-key="チョコレート・カカオ"></div></div>
+      <div class="feature"><h3>🍓 フルーティー</h3><div class="scale" data-key="フルーティー"></div></div>
+      <div class="feature"><h3>🌸 紅茶・華やか</h3><div class="scale" data-key="紅茶・華やか"></div></div>
+      <div class="feature"><h3>🍯 蜂蜜・キャラメル・甘み</h3><div class="scale" data-key="蜂蜜・キャラメル・甘み"></div></div>
+      <div class="feature"><h3>🌰 香ばしい・ナッツ</h3><div class="scale" data-key="香ばしい・ナッツ"></div></div>
+      <div class="feature"><h3>🌿 個性的・野性的</h3><div class="scale" data-key="個性的・野性的"></div></div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button class="primary" id="diagnoseBtn" disabled>診断結果を見る</button>
+    <button class="secondary" id="resetBtn" type="button">最初からやり直す</button>
+  </div>
+</main>
+
+<section id="result" class="container">
+  <div class="result-head">
+    <span class="badge">DIAGNOSIS RESULT</span>
+    <h2>あなたにおすすめのコーヒー豆</h2>
+    <p class="lead">あなたの好みと各銘柄の味わいを比較し、合致度の高い順に3銘柄を選びました。</p>
+  </div>
+  <div id="resultList"></div>
+  <div class="actions">
+    <button class="secondary" id="backBtn">診断に戻る</button>
+  </div>
+</section>
+
+<footer>手焙煎珈琲あさぎ</footer>
+
+<script>
+const beans = [{"銘柄名": "あさぎブレンド", "苦味": 3, "酸味": 3, "甘味": 3, "コク": 3.5, "焙煎度": "中深煎り", "精製方法": "ブレンド", "農園・産地": null, "風味・特徴": "苦味・酸味・甘味のバランスが良く、飲みやすい味わい", "おすすめ": "バランスの良い飲みやすいコーヒーが好きな方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 2.5, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "やまぶきブレンド", "苦味": 4.5, "酸味": 2, "甘味": 2, "コク": 4.5, "焙煎度": "深煎り", "精製方法": "ブレンド", "農園・産地": null, "風味・特徴": "しっかりとした苦味とコク", "おすすめ": "苦味・コクのあるコーヒー、アイスコーヒー、カフェオレが好きな方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "エチオピア イルガチェフェ ブナブナG1", "苦味": 1.5, "酸味": 4, "甘味": 4, "コク": 1.5, "焙煎度": "浅煎り", "精製方法": "ナチュラル", "農園・産地": "イルガチェフェ地区", "風味・特徴": "アールグレイのような紅茶感、ラズベリーのような酸味", "おすすめ": "香り高いコーヒー、酸味のあるコーヒー、「モカコーヒー」が好きな方", "100g価格": "950円", "200g価格": "1,800円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 2.5, "紅茶・華やか": 4.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "パプアニューギニア ハイランドスウィート", "苦味": 2, "酸味": 4, "甘味": 4.5, "コク": 2.5, "焙煎度": "浅煎り", "精製方法": "ウォッシュド", "農園・産地": "ギガバー農園", "風味・特徴": "りんご、さくらんぼ、ブラウンシュガーのような風味", "おすすめ": "エキゾチックな香味やフルーティな酸味が好きな方", "100g価格": "900円", "200g価格": "1,700円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 4.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 2.5, "香ばしい・ナッツ": 1.0, "個性的・野性的": 2.5}}, {"銘柄名": "ベネズエラ ムクカイ ウォッシュド", "苦味": 2, "酸味": 3, "甘味": 4.5, "コク": 3.5, "焙煎度": "中浅煎り", "精製方法": "ウォッシュド", "農園・産地": "ムクカイ農園", "風味・特徴": "キャラメルのようになめらかな口当たり、ミルクチョコレート、ライムのような風味", "おすすめ": "苦味も酸味も程よく感じたい方、優しい味わいが好きな方", "100g価格": "900円", "200g価格": "1,700円", "feature_scores": {"チョコレート・カカオ": 4.0, "フルーティー": 2.5, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 2.5, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "東ティモール レヌマタ", "苦味": 1.5, "酸味": 4, "甘味": 4.5, "コク": 2, "焙煎度": "中浅煎り", "精製方法": "ウォッシュド", "農園・産地": "エルメラ県レテフォホ群レヌマタ村", "風味・特徴": "軽やかな口当たり、甲州白ワインやレモンのような風味", "おすすめ": "さっぱりとしたコーヒーや爽やかな酸味のあるコーヒーが好きな方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 4.0, "紅茶・華やか": 2.5, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "ネパール 雪男スペシャル", "苦味": 2.5, "酸味": 2.5, "甘味": 3.5, "コク": 3, "焙煎度": "中煎り", "精製方法": "ウォッシュド", "農園・産地": "ネパール", "風味・特徴": "大豆やきなこのような独特で野生的な香味", "おすすめ": "程よいバランス感のコーヒー、「ブルーマウンテン」が好きな方", "100g価格": "1,050円", "200g価格": "2,000円", "feature_scores": {"チョコレート・カカオ": 2.5, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 4.0}}, {"銘柄名": "コスタリカ ガンボア ブラックハニー", "苦味": 3, "酸味": 3.5, "甘味": 4, "コク": 3.5, "焙煎度": "中煎り", "精製方法": "ブラックハニー", "農園・産地": "ガンボア農園", "風味・特徴": "なめらかな口当たり、いちごや蜂蜜のような酸味と甘み", "おすすめ": "苦味も酸味も程よく感じたい方", "100g価格": "900円", "200g価格": "1,700円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 2.5, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 4.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "タンザニア アデラ AA", "苦味": 2.5, "酸味": 2.5, "甘味": 3.5, "コク": 2.5, "焙煎度": "中深煎り", "精製方法": "ウォッシュド", "農園・産地": "キリマンジャロ山麓アルーシャ地区", "風味・特徴": "黒飴のような香ばしい風味、きれいな後味", "おすすめ": "香ばしさのあるコーヒー、キリマンジャロが好きな方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 4.0, "個性的・野性的": 1.0}}, {"銘柄名": "グァテマラ ゴールデンパレンシア", "苦味": 3.5, "酸味": 2, "甘味": 3, "コク": 3.5, "焙煎度": "中深煎り", "精製方法": "ウォッシュド", "農園・産地": "リオ・コロラド農園", "風味・特徴": "カカオやチョコレートのような風味", "おすすめ": "「コーヒーらしさ」のあるコーヒーが好きな方、色々な人に飲んでもらう1銘柄として", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 4.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "コロンビア クレオパトラ スプレモ", "苦味": 4.5, "酸味": 1.5, "甘味": 3, "コク": 3, "焙煎度": "深煎り", "精製方法": "ウォッシュド", "農園・産地": "南西部ウィラ", "風味・特徴": "麦芽のような穀物感のある風味", "おすすめ": "香ばしさのあるコーヒー、しっかりした苦味が欲しい方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 5, "個性的・野性的": 1.0}}, {"銘柄名": "ブラジル ショコラ ピーベリー", "苦味": 4, "酸味": 2, "甘味": 3.5, "コク": 4, "焙煎度": "深煎り", "精製方法": "ナチュラル", "農園・産地": "サントアントニオ", "風味・特徴": "ローストナッツのような風味、ミルクチョコのような甘み", "おすすめ": "苦味と甘みのあるコーヒーが好きな方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 4.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 2.5, "香ばしい・ナッツ": 4.0, "個性的・野性的": 1.0}}, {"銘柄名": "ニカラグア パブロ・ベラスケス", "苦味": 4.5, "酸味": 1, "甘味": 2.5, "コク": 4.5, "焙煎度": "深煎り", "精製方法": "ウォッシュド", "農園・産地": "パブロ・ベラスケス農園", "風味・特徴": "ダークチョコレートのような長く余韻のある苦味", "おすすめ": "苦味とコクのしっかりとしたコーヒーが好きな方", "100g価格": "850円", "200g価格": "1,650円", "feature_scores": {"チョコレート・カカオ": 4.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 1.0, "個性的・野性的": 1.0}}, {"銘柄名": "メキシコ チアパス カフェインレス", "苦味": 3.5, "酸味": 3, "甘味": 3.5, "コク": 4.5, "焙煎度": "中深煎り", "精製方法": "ウォッシュド", "農園・産地": "チアパス州", "風味・特徴": "ミルキーな口当たり、穀物感のある風味", "おすすめ": "カフェインレスを求めている方、カフェインレスに見えない味わいを試したい方", "100g価格": "900円", "200g価格": "1,700円", "feature_scores": {"チョコレート・カカオ": 1.0, "フルーティー": 1.0, "紅茶・華やか": 1.0, "蜂蜜・キャラメル・甘み": 1.0, "香ばしい・ナッツ": 2.5, "個性的・野性的": 1.0}}];
+const tasteKeys = ["苦味","酸味","甘味","コク"];
+const featureKeys = ["チョコレート・カカオ","フルーティー","紅茶・華やか","蜂蜜・キャラメル・甘み","香ばしい・ナッツ","個性的・野性的"];
+const answers = {};
+const labels = {
+  "苦味":["少ない","やや少ない","普通","しっかり","とても強い"],
+  "酸味":["少ない","やや少ない","普通","爽やか","とても好き"],
+  "甘味":["気にしない","ほんのり","普通","甘め","しっかり"],
+  "コク":["軽い","やや軽い","普通","しっかり","濃厚"],
+  "default":["1","2","3","4","5"]
+};
+
+document.querySelectorAll(".scale").forEach(scale => {
+  const key = scale.dataset.key;
+  for(let i=1;i<=5;i++){
+    const b=document.createElement("button");
+    b.type="button";
+    b.innerHTML=`<span class="num">${i}</span><span class="txt">${labels[key]?.[i-1] ?? i}</span>`;
+    b.addEventListener("click",()=>{
+      answers[key]=i;
+      scale.querySelectorAll("button").forEach(x=>x.classList.remove("selected"));
+      b.classList.add("selected");
+      updateProgress();
+    });
+    scale.appendChild(b);
+  }
+});
+
+function updateProgress(){
+  const total=tasteKeys.length+featureKeys.length;
+  const count=[...tasteKeys,...featureKeys].filter(k=>answers[k]).length;
+  document.getElementById("progressBar").style.width=(count/total*100)+"%";
+  document.getElementById("stepLabel").textContent=`${count} / ${total} 項目`;
+  document.getElementById("diagnoseBtn").disabled=count<total;
+}
+
+function scoreBean(bean){
+  let tasteDist=0, tasteMax=0;
+  tasteKeys.forEach(k=>{
+    tasteDist += Math.abs(answers[k]-Number(bean[k]));
+    tasteMax += 4;
+  });
+  // Taste contributes 70%.
+  const tasteScore = 100 * (1 - tasteDist/tasteMax);
+
+  let featureDist=0, featureMax=0;
+  featureKeys.forEach(k=>{
+    const beanValue = Number(bean.feature_scores[k] || 1);
+    featureDist += Math.abs(answers[k]-beanValue);
+    featureMax += 4;
+  });
+  // Feature preference contributes 30%.
+  const featureScore = 100 * (1 - featureDist/featureMax);
+  return Math.round(tasteScore*0.7 + featureScore*0.3);
+}
+
+function explain(bean){
+  const parts=[];
+  const diffs=tasteKeys.map(k=>({k,d:Math.abs(answers[k]-Number(bean[k]))})).sort((a,b)=>a.d-b.d);
+  const closest=diffs.slice(0,2).map(x=>x.k);
+  if(closest.length) parts.push(`${closest.join("・")}の好みと特に相性が良い味わいです。`);
+  if(bean["風味・特徴"]) parts.push(bean["風味・特徴"]+"。");
+  return parts.join("");
+}
+
+function renderResults(){
+  const ranked=beans.map(bean=>({...bean, score:scoreBean(bean)}))
+    .sort((a,b)=>b.score-a.score || a["銘柄名"].localeCompare(b["銘柄名"],"ja"))
+    .slice(0,3);
+  const list=document.getElementById("resultList");
+  list.innerHTML="";
+  ranked.forEach((bean,i)=>{
+    const card=document.createElement("article");
+    card.className="result-card";
+    card.innerHTML=`
+      <div class="rank">${i===0?"🥇":i===1?"🥈":"🥉"} ${i+1}位</div>
+      <div class="result-title">
+        <div>
+          <h3>${escapeHtml(bean["銘柄名"])}</h3>
+          <div class="meta">${escapeHtml(bean["焙煎度"])} ／ 苦味 ${bean["苦味"]}・酸味 ${bean["酸味"]}・甘味 ${bean["甘味"]}・コク ${bean["コク"]}</div>
+        </div>
+        <div class="match">${bean.score}% 合致</div>
+      </div>
+      <div class="reason">${escapeHtml(explain(bean))}</div>
+      <p>${escapeHtml(bean["おすすめ"] || "")}</p>
+      <div class="price">100g ${escapeHtml(bean["100g価格"])} ／ 200g ${escapeHtml(bean["200g価格"])}</div>
+      <a class="purchase" href="${shopSearchUrl(bean["銘柄名"])}" target="_blank" rel="noopener">オンラインショップで購入・在庫を確認 →</a>
+    `;
+    list.appendChild(card);
+  });
+}
+
+function shopSearchUrl(name){
+  return "https://asagiroast.theshop.jp/search?q=" + encodeURIComponent(name);
+}
+
+function escapeHtml(s){
+  return String(s ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+}
+
+document.getElementById("diagnoseBtn").addEventListener("click",()=>{
+  renderResults();
+  document.getElementById("quiz").style.display="none";
+  document.getElementById("result").style.display="block";
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+document.getElementById("backBtn").addEventListener("click",()=>{
+  document.getElementById("result").style.display="none";
+  document.getElementById("quiz").style.display="block";
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+document.getElementById("resetBtn").addEventListener("click",()=>{
+  Object.keys(answers).forEach(k=>delete answers[k]);
+  document.querySelectorAll(".scale button").forEach(b=>b.classList.remove("selected"));
+  updateProgress();
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+</script>
+</body>
+</html>
